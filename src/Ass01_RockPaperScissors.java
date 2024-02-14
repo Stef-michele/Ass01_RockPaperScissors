@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class Ass01_RockPaperScissors {
 
     public static void main(String[] args) {
+        //scanner in
         Scanner in = new Scanner(System.in);
+        //declare variables
         String playAgain = "";
         String playerA = "";
         String playerB = "";
@@ -44,6 +46,7 @@ public class Ass01_RockPaperScissors {
             System.out.println("Do you want to play again? (Y/N):");
             playAgain = in.next();
 
+        //keeps loop going until signals N for done.
         } while (playAgain.equalsIgnoreCase("Y"));
 
         System.out.println("Thanks for playing!");
