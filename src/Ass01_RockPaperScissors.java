@@ -19,7 +19,7 @@ public class Ass01_RockPaperScissors
 
             // ask for player a move
             System.out.println("Enter your move Player A: (R)Rock/(P)Paper/(S)Scissors: ");
-            // while only allows for RPS input skips this loop entirely if the input is RP or S
+            // while only allows for RPS input and keeps loop going until it's correct
             while (!(playerA.equals("R") || playerA.equals("P") || playerA.equals("S")))
             {
                 playerA = in.next().toUpperCase(); //takes input and assigns upperCase form to player A
@@ -32,7 +32,7 @@ public class Ass01_RockPaperScissors
 
             // Get valid move for player B
             System.out.println("Enter your move player B: (R)Rock/(P)Paper/(S)Scissors: ");
-            //only allows for RPS input again, skips part entirely if it is RP or S.
+            //only allows for RPS input again, keeps whole thing looping
             while (!(playerB.equals("R") || playerB.equals("P") || playerB.equals("S")))
             {
                 playerB = in.next().toUpperCase();// takes input and assigns uppercase
@@ -41,7 +41,7 @@ public class Ass01_RockPaperScissors
                 }
             }
 
-            // Determine winner with if th
+            // Determine winner with cascaded if
             if (playerA.equals(playerB)) {
                 System.out.println("It's a tie! Both players chose " + playerA);
             } else if ((playerA.equals("R") && playerB.equals("S")) ||
@@ -58,7 +58,6 @@ public class Ass01_RockPaperScissors
 
 //end of do-while from top for game restart
         } while (playAgain.equalsIgnoreCase("Y"));
-
 
         in.close(); // Close the scanner when done
     }
